@@ -42,28 +42,30 @@ int main()
 	int idx = comand.find_first_of(" ");
 	string S1 = upper(comand.substr(0,idx)); //order
 	string S2 = upper(comand.substr(idx+1,comand.size())); //option
-	//cout<<S1<<" "<<S2;
+	
 	if(S1 == "EXIT") break;
 	else if(S1 == "NAME"){
 		for(int j=0;j<20;j++) cout<<"-";
 	 	cout<<"\n";
 		for(int i=0;i<vname.size();i++){
 			if(S2 == upper(vname[i])) cout<<vname[i]<<"'s grade = "<<vgrade[i]<<"\n";
-			else if (S2 != upper(vname[i])) ;
+			else if (S2 != upper(vname[i])&& i!=vname.size()-1) ;
 			else cout<<"Cannot found";
 		}
+		cout<<"\n";
 		for(int j=0;j<20;j++) cout<<"-";
-	 	cout<<"\n";
+		cout<<"\n";	
 	}
 	
 	else if(S1 == "GRADE"){
 		for(int j=0;j<20;j++) cout<<"-";
-			cout<<"\n";
+		cout<<"\n";
 		for(int i=0;i<vgrade.size();i++){
 			if(S2 == vgrade[i]) cout<<vname[i]<<"\n";
-			else if (S2 != vgrade[i]) ;
+			else if (S2 != vgrade[i]&& i!=vname.size()-1) ;
 			else cout<<"Cannot found"<<"\n";
 		}
+		cout<<"\n";
 		for(int a=0;a<20;a++) cout<<"-";
 		cout<<"\n";
 	}

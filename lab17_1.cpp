@@ -50,9 +50,8 @@ int main()
 		for(int i=0;i<vname.size();i++){
 			if(S2 == upper(vname[i])) cout<<vname[i]<<"'s grade = "<<vgrade[i]<<"\n";
 			else if (S2 != upper(vname[i])&& i!=vname.size()-1) ;
-			else cout<<"Cannot found";
+			else cout<<"Cannot found"<<"\n";
 		}
-		cout<<"\n";
 		for(int j=0;j<20;j++) cout<<"-";
 		cout<<"\n";	
 	}
@@ -65,7 +64,6 @@ int main()
 			else if (S2 != vgrade[i]&& i!=vname.size()-1) ;
 			else cout<<"Cannot found"<<"\n";
 		}
-		cout<<"\n";
 		for(int a=0;a<20;a++) cout<<"-";
 		cout<<"\n";
 	}
